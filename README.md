@@ -1,3 +1,6 @@
+Jusung Hwang
+4996348
+
 Predicting Daily Stock Prices
 
 i. a brief description of the project.
