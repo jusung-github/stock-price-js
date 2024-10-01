@@ -4,7 +4,7 @@ Jusung Hwang
 Predicting Daily Stock Prices
 
 i. a brief description of the project.
-For this project, I will develop a simple statistical model that can be used to predict a stock's price for the next day based on patterns in previous closing prices. 
+For this project, I will develop a simple statistical model that can be used to predict a stock's price for the next day based on patterns in previous closing prices. This algorithm will create a model that can be used for any stock, as long as the financial data is available. 
 
 ii. the algorithm / library / methods that you want to use.
 I will use linear regression and moving average. Linear regression will compare the previous closing prices of a stock and the current prices to identify trends. Moving averages will smooth out short-term fluctuations and highlight long-term trends. Historical data will also be used to identify trends and patterns.
