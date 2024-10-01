@@ -11,7 +11,7 @@ I will use linear regression and moving average. Linear regression will compare 
 Libraries such as pandas, numpy, and matplotlib for data handling and visualization. In addition, I will use scikit-learn for regression modeling and accuracy evaluation using metrics such as Mean Squared Error or Mean Absolute Error.
 
 iii. any data that you might need.
-For this project, I will need historical stock price data over a few weeks to months on daily closing prices to identify trends. I will use publicly available financial data from sources like Yahoo Finance or Alpha Vantage API.
+For this project, I will need historical stock price data over a few weeks to months on daily closing prices to identify trends. I will use publicly available financial data from Yahoo Finance.
 
 iv. the expected outcome.
 From this project, a functional model that can predict a stock's closing price for the next day will be made. We can also compare the accuracy of the prediction by comparing it to the actual price. 
