@@ -19,3 +19,4 @@ def get_stock_data(ticker: str):
     stock_data : pandas.DataFrame
         DataFrame with stock data.
     """
+ stock_data = yf.download(ticker, period="12mo")
