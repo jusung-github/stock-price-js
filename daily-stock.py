@@ -7,3 +7,15 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 def get_stock_data(ticker: str):
+    """
+    Search for stock data for a given ticker.
+    Parameters:
+    ----------
+    ticker : str
+        ticker: stock ticker symbol (e.g., 'TSLA', 'GOOG').
+        str: indicates ticker should be type string.
+    Returns:
+    -------
+    stock_data : pandas.DataFrame
+        DataFrame with stock data.
+    """
