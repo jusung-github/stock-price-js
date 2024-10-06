@@ -19,7 +19,7 @@ def get_stock_data(ticker: str):
     stock_data : pandas.DataFrame
         DataFrame with stock data.
     """
- stock_data = yf.download(ticker, period="12mo")
+ stock_data = yf.download(ticker, period="1y")
     if stock_data.empty:
         raise ValueError(f"No data found for ticker {ticker}")
     return stock_data
