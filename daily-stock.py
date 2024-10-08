@@ -23,3 +23,23 @@ def get_stock_data(ticker: str):
     if stock_data.empty:
         raise ValueError(f"No data found for ticker {ticker}")
     return stock_data
+
+def prepare_data(stock_data: pd.DataFrame):
+    """
+    Prepares stock data for model training. The 'Close' price is shifted to predict the next day's price.
+    Parameters:
+    ----------
+    stock_data : pandas.DataFrame
+        DataFrame containing stock data with 'Close' prices.
+    Returns:
+    -------
+    X_train, X_test, y_train, y_test : tuple
+        Training and testing data.
+    """
+    stock_data['Prediction'] = stock_data['Close'].shift(-1)
+
+    X = stock_data[['Close']].values
+    y = stock_data['Prediction'].values
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
+    return X_train, X_test, y_train, y_test
