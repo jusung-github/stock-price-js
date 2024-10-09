@@ -43,3 +43,21 @@ def prepare_data(stock_data: pd.DataFrame):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, shuffle=False)
     return X_train, X_test, y_train, y_test
+    
+def train_model(X_train: np.ndarray, y_train: np.ndarray):
+    """
+    Train a linear regression model on the provided data.
+    Parameters:
+    ----------
+    X_train : np.ndarray
+        Training features (closing prices).
+    y_train : np.ndarray
+        Training targets (next day's price).
+    Returns:
+    -------
+    model : sklearn.linear_model.LinearRegression
+        Trained linear regression model.
+    """
+    model = LinearRegression()
+    model.fit(X_train, y_train)
+    return model
