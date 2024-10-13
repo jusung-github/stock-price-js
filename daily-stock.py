@@ -61,3 +61,20 @@ def train_model(X_train: np.ndarray, y_train: np.ndarray):
     model = LinearRegression()
     model.fit(X_train, y_train)
     return model
+
+def predict_stock_price(model, X_test: np.ndarray):
+    """
+    Use trained model to predict stock price.
+    Parameters:
+    ----------
+    model : sklearn.linear_model.LinearRegression
+        Trained model.
+    X_test : np.ndarray
+        Testing features (closing prices).
+    Returns:
+    -------
+    predictions : np.ndarray
+        Predicted prices.
+    """
+    predictions = model.predict(X_test)
+    return predictions
