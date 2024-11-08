@@ -32,3 +32,20 @@ def test_train_model():
     X_train, X_test, y_train, y_test = prepare_data(stock_data)
     model = train_model(X_train, y_train)
     assert model is not None, "Expected trained model instance."
+
+def test_get_stock_data_no_data():
+    """
+    Test get_stock_data raises a ValueError when no data is available for the ticker.
+    """
+    with pytest.raises(ValueError):
+        get_stock_data("NODATA") 
+
+def test_prepare_data_insufficient_data():
+    """
+    Test prepare_data raises an error when there are too few data points.
+    """
+    # Create a DataFrame with only a few rows
+    stock_data = pd.DataFrame({"Close": [150, 152]})
+    with pytest.raises(ValueError, match="Not enough data"):
+        prepare_data(stock_data)
+
