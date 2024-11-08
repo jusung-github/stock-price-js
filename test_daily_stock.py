@@ -1,5 +1,5 @@
 import pytest
-from daily-stock import get_stock_data, prepare_data, train_model, predict_stock_price
+from daily_stock import get_stock_data, prepare_data, train_model, predict_stock_price
 
 def test_get_stock_data_valid_ticker():
     stock_data = get_stock_data("AAPL")
