@@ -20,4 +20,4 @@ From this project, a functional model that can predict a stock's closing price f
 
 Below is the output of running tests on the project using `pytest`:
 
-![Test Results](pytest_result.png)
+![Test Results](pytest_results.png)

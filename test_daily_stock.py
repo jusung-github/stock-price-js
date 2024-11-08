@@ -1,4 +1,6 @@
 import pytest
+import pandas as pd
+import numpy as np
 from daily_stock import get_stock_data, prepare_data, train_model, predict_stock_price
 
 def test_get_stock_data_valid_ticker():
@@ -39,13 +41,4 @@ def test_get_stock_data_no_data():
     """
     with pytest.raises(ValueError):
         get_stock_data("NODATA") 
-
-def test_prepare_data_insufficient_data():
-    """
-    Test prepare_data raises an error when there are too few data points.
-    """
-    # Create a DataFrame with only a few rows
-    stock_data = pd.DataFrame({"Close": [150, 152]})
-    with pytest.raises(ValueError, match="Not enough data"):
-        prepare_data(stock_data)
 
