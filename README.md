@@ -15,3 +15,9 @@ For this project, I will need historical stock price data over a few months (12 
 
 iv. the expected outcome.
 From this project, a functional model that can predict a stock's closing price for the next day will be made. We can also compare the accuracy of the prediction by comparing it to the actual price. 
+
+## Test Results
+
+Below is the output of running tests on the project using `pytest`:
+
+![Test Results](pytest_result.png)
